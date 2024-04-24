@@ -89,7 +89,7 @@ class DropDownMultiSelect<T> extends StatefulWidget {
   final Widget Function(T option)? menuItembuilder;
 
   /// a function to validate
-  final String Function(T? selectedOptions)? validator;
+  final String? Function(T? selectedOptions)? validator;
 
   /// defines whether the widget is read-only
   final bool readOnly;
@@ -142,7 +142,7 @@ class _DropDownMultiSelectState<TState> extends State<DropDownMultiSelect<TState
               hint: widget.hint,
               style: widget.hintStyle,
               icon: widget.icon,
-              validator: widget.validator != null ? widget.validator : null,
+              validator: widget.validator,
               decoration: widget.decoration != null
                   ? widget.decoration
                   : InputDecoration(
